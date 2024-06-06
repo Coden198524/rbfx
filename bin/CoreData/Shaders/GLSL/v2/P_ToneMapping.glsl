@@ -76,6 +76,16 @@ vec3 Uncharted2(vec3 v)
     return curr * whiteScale;
 }
 
+vec3 ACES(vec3 x) 
+{
+    const float a = 2.51;
+    const float b = 0.03;
+    const float c = 2.43;
+    const float d = 0.59;
+    const float e = 0.14;
+    return clamp((x * (a * x + b)) / (x * (c * x + d) + e), 0.0, 1.0);
+}
+
 
 #endif
 
@@ -109,6 +119,10 @@ void main()
 #ifdef UNCHARTED2
     const vec3 whiteScale = 1.0 / Uncharted2(vec3(4.0));
     finalColor = Uncharted2(finalColor) * whiteScale;
+#endif
+
+#ifdef ACES
+    finalColor = ACES(finalColor);
 #endif
 
     gl_FragColor = vec4(LinearToGammaSpace(finalColor), 1.0);

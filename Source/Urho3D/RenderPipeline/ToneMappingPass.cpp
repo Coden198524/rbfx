@@ -65,6 +65,9 @@ void ToneMappingPass::InitializeStates()
     case ToneMappingMode::Uncharted2:
         defines += "UNCHARTED2 ";
         break;
+    case ToneMappingMode::ACES:
+        defines += "ACES";
+        break;
     default:
         break;
     }

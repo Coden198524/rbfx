@@ -666,6 +666,7 @@ enum class ToneMappingMode
     ReinhardWhite,
     Filmic,
     Uncharted2,
+    ACES
 };
 
 struct AutoExposurePassSettings
