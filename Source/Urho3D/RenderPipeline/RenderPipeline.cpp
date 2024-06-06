@@ -98,6 +98,7 @@ static const ea::vector<ea::string> toneMappingModeNames =
     "None",
     "Reinhard",
     "ReinhardWhite",
+    "Filmic",
     "Uncharted2",
 };
 

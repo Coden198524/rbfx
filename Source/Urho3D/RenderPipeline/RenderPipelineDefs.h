@@ -664,6 +664,7 @@ enum class ToneMappingMode
     None,
     Reinhard,
     ReinhardWhite,
+    Filmic,
     Uncharted2,
 };
 

@@ -59,6 +59,9 @@ void ToneMappingPass::InitializeStates()
     case ToneMappingMode::ReinhardWhite:
         defines += "REINHARDWHITE ";
         break;
+    case ToneMappingMode::Filmic:
+        defines += "FILMIC";
+        break;
     case ToneMappingMode::Uncharted2:
         defines += "UNCHARTED2 ";
         break;
