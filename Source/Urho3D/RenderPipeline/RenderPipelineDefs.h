@@ -460,7 +460,7 @@ struct ShadowMapAllocatorSettings
     bool enableVarianceShadowMaps_{};
     int varianceShadowMapMultiSample_{ 1 };
     bool use16bitShadowMaps_{};
-    unsigned shadowAtlasPageSize_{ 2048 };
+    unsigned shadowAtlasPageSize_{ 8192 };
 
     float depthBiasScale_{1.0f};
     float depthBiasOffset_{0.0f};
@@ -559,9 +559,9 @@ struct SceneProcessorSettings
     bool depthPrePass_{ false };
     bool enableShadows_{ true };
     DirectLightingMode lightingMode_{};
-    unsigned directionalShadowSize_{ 1024 };
-    unsigned spotShadowSize_{ 1024 };
-    unsigned pointShadowSize_{ 256 };
+    unsigned directionalShadowSize_{ 4096 };
+    unsigned spotShadowSize_{ 4096 };
+    unsigned pointShadowSize_{ 1024 };
 
     /// Utility operators
     /// @{
